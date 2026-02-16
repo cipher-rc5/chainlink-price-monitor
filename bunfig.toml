@@ -1,0 +1,10 @@
+[install]
+optional = true
+peer = true
+dev = true
+production = false
+
+[install.scopes]
+
+[run]
+shell = "bun"
