@@ -12,7 +12,7 @@
     "typecheck": "bun run type-check"
   },
   "dependencies": {
-    "viem": "2.46.1",
+    "viem": "2.46.2",
     "ws": "8.19.0"
   },
   "devDependencies": {
