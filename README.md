@@ -71,10 +71,6 @@ bun run type-check
 - `src/utils/` - Utility functions
 - `src/index.ts` - Main entry point
 
-
-reference
-https://claude.ai/chat/28607883-605d-4b13-b080-8ef9db757b32
-
 ## License
 
 MIT
