@@ -10,11 +10,7 @@ import { type Address, createPublicClient, fallback, http, type PublicClient } f
 
 type UniswapV3Slot0Tuple = readonly [bigint, number, number, number, number, number, boolean];
 
-const BASE_ASSET_TOKEN_SYMBOL: Record<string, string> = {
-  ETH: 'WETH',
-  BTC: 'WBTC',
-  AVAX: 'WAVAX'
-};
+const BASE_ASSET_TOKEN_SYMBOL: Record<string, string> = { ETH: 'WETH', BTC: 'WBTC', AVAX: 'WAVAX' };
 
 function normalize_slot0(raw_data: unknown): UniswapV3Slot0Result {
   if (Array.isArray(raw_data)) {

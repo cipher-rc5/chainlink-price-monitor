@@ -12,12 +12,7 @@ function format_error(error: unknown): string {
 
 const SUPPORTED_CHAINS: ChainId[] = [1, 43114, 8453, 42161];
 
-const CHAIN_PAIRS: Record<ChainId, string[]> = {
-  1: ['ETH/USD', 'BTC/USD'],
-  43114: ['AVAX/USD'],
-  8453: ['ETH/USD'],
-  42161: ['ETH/USD']
-};
+const CHAIN_PAIRS: Record<ChainId, string[]> = { 1: ['ETH/USD', 'BTC/USD'], 43114: ['AVAX/USD'], 8453: ['ETH/USD'], 42161: ['ETH/USD'] };
 
 async function monitor_prices(): Promise<void> {
   console.log('Initializing Chainlink Price Monitor...');

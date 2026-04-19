@@ -19,44 +19,28 @@ export const CHAINS: Record<ChainId, ChainConfig> = {
   1: {
     chain_id: 1,
     name: 'Ethereum Mainnet',
-    rpc_urls: compact_urls(
-      process.env.ETH_RPC_URL,
-      blink_rpc('eth'),
-      'https://eth.llamarpc.com'
-    ),
+    rpc_urls: compact_urls(process.env.ETH_RPC_URL, blink_rpc('eth'), 'https://eth.llamarpc.com'),
     block_time_seconds: 12,
     finality_blocks: 64
   },
   43114: {
     chain_id: 43114,
     name: 'Avalanche C-Chain',
-    rpc_urls: compact_urls(
-      process.env.AVALANCHE_RPC_URL,
-      blink_rpc('avalanche-mainnet'),
-      'https://api.avax.network/ext/bc/C/rpc'
-    ),
+    rpc_urls: compact_urls(process.env.AVALANCHE_RPC_URL, blink_rpc('avalanche-mainnet'), 'https://api.avax.network/ext/bc/C/rpc'),
     block_time_seconds: 2,
     finality_blocks: 1
   },
   8453: {
     chain_id: 8453,
     name: 'Base',
-    rpc_urls: compact_urls(
-      process.env.BASE_RPC_URL,
-      blink_rpc('base'),
-      'https://mainnet.base.org'
-    ),
+    rpc_urls: compact_urls(process.env.BASE_RPC_URL, blink_rpc('base'), 'https://mainnet.base.org'),
     block_time_seconds: 2,
     finality_blocks: 1
   },
   42161: {
     chain_id: 42161,
     name: 'Arbitrum One',
-    rpc_urls: compact_urls(
-      process.env.ARBITRUM_RPC_URL,
-      blink_rpc('arbitrum-one'),
-      'https://arb1.arbitrum.io/rpc'
-    ),
+    rpc_urls: compact_urls(process.env.ARBITRUM_RPC_URL, blink_rpc('arbitrum-one'), 'https://arb1.arbitrum.io/rpc'),
     block_time_seconds: 0.25,
     finality_blocks: 1
   }
@@ -139,7 +123,12 @@ export const DEX_POOLS: Record<ChainId, Record<string, UniswapV3PoolConfig[]>> =
     }]
   },
   8453: {
-    'ETH/USD': [{ token0: TOKENS[8453]!.WETH!.address, token1: TOKENS[8453]!.USDC!.address, fee: 500, factory: UNISWAP_V3_FACTORIES[8453]! }]
+    'ETH/USD': [{
+      token0: TOKENS[8453]!.WETH!.address,
+      token1: TOKENS[8453]!.USDC!.address,
+      fee: 500,
+      factory: UNISWAP_V3_FACTORIES[8453]!
+    }]
   },
   42161: {
     'ETH/USD': [{

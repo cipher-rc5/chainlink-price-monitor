@@ -22,13 +22,7 @@ function normalize_latest_round_data(raw_data: unknown): ChainlinkLatestRoundDat
     }
 
     const tuple = raw_data as unknown as ChainlinkLatestRoundDataTuple;
-    return {
-      roundId: tuple[0],
-      answer: tuple[1],
-      startedAt: tuple[2],
-      updatedAt: tuple[3],
-      answeredInRound: tuple[4]
-    };
+    return { roundId: tuple[0], answer: tuple[1], startedAt: tuple[2], updatedAt: tuple[3], answeredInRound: tuple[4] };
   }
 
   return raw_data as ChainlinkLatestRoundDataResult;
